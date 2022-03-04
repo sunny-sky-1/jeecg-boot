@@ -28,23 +28,7 @@ public class DemoSystemAPIController {
     private ISysUserService sysUserService;
 
 
-    /**
-     * 发送系统消息
-     * @param message 使用构造器赋值参数 如果不设置category(消息类型)则默认为2 发送系统消息
-     */
-    @PostMapping("/sendSysAnnouncement")
-    public void sendSysAnnouncement(@RequestBody MessageDTO message){
-        sysBaseAPI.sendSysAnnouncement(message);
-    }
 
-    /**
-     * 发送消息 附带业务参数
-     * @param message 使用构造器赋值参数
-     */
-    @PostMapping("/sendBusAnnouncement")
-    public void sendBusAnnouncement(@RequestBody BusMessageDTO message){
-        sysBaseAPI.sendBusAnnouncement(message);
-    }
 
     /**
      * 通过模板发送消息
